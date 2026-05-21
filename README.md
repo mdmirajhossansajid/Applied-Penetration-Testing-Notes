@@ -5,38 +5,17 @@
 ![GitHub stars](https://img.shields.io/github/stars/mdmirajhossansajid/Applied-Penetration-Testing-Notes)
 ![GitHub forks](https://img.shields.io/github/forks/mdmirajhossansajid/Applied-Penetration-Testing-Notes)
 
-A professional cybersecurity learning repository containing penetration testing notes, Linux commands, reconnaissance techniques, vulnerability assessment, exploitation methods, and practical hands-on lab exercises.
-
-This repository documents my practical cybersecurity learning journey using tools such as Nmap, Metasploit, Hydra, OpenVAS, Nessus, Recon-ng, Sublist3r, Meterpreter, and more.
-
 ---
 
-# 📌 Repository Overview
+# 🔐 Applied Penetration Testing Notes
 
-This repository includes practical notes and command references related to:
+A professional cybersecurity learning repository containing penetration testing notes, reconnaissance techniques, vulnerability assessment methods, exploitation techniques, firewall management, and practical hands-on cybersecurity lab exercises.
 
-- Information Gathering
-- Reconnaissance
-- Scanning & Enumeration
-- Vulnerability Assessment
-- Password Attacks
-- Exploitation Techniques
-- Meterpreter Operations
-- Linux Firewall Rules
-- OSINT Techniques
-- Network Security
-- Web Enumeration
-- Penetration Testing Labs
+This repository documents my practical cybersecurity learning journey using tools such as:
 
----
-
-# 🧰 Tools & Technologies
-
-- Kali Linux
-- Linux Terminal
 - Nmap
-- Hydra
 - Metasploit Framework
+- Hydra
 - Meterpreter
 - OpenVAS
 - Nessus
@@ -44,10 +23,55 @@ This repository includes practical notes and command references related to:
 - Sublist3r
 - Netcat
 - IPTables
+- Kali Linux
 - Wireshark
-- WhatWeb
-- theHarvester
-- Wafw00f
+
+---
+
+# 📚 Quick Navigation
+
+- [Reconnaissance](./Reconnaissance)
+- [Scanning & Enumeration](./Scanning-Enumeration)
+- [Vulnerability Assessment](./Vulnerability-Assessment)
+- [Password Attacks](./Password-Attacks)
+- [Exploitation](./Exploitation)
+- [Firewall](./Firewall)
+- [Resources](./Resources)
+
+---
+
+# 📌 Repository Overview
+
+This repository contains:
+
+- Information Gathering Techniques
+- OSINT & Reconnaissance
+- Network Scanning & Enumeration
+- Vulnerability Assessment
+- Password Attacks
+- Exploitation Techniques
+- Meterpreter Operations
+- Firewall Configuration
+- Penetration Testing Lab Notes
+- Practical Cybersecurity Commands
+
+---
+
+# 🧰 Tools & Technologies
+
+| Tool | Purpose |
+|---|---|
+| Nmap | Network Scanning & Enumeration |
+| Metasploit | Exploitation Framework |
+| Hydra | Password Attacks |
+| Meterpreter | Post Exploitation |
+| OpenVAS | Vulnerability Assessment |
+| Nessus | Security Scanning |
+| Recon-ng | Reconnaissance Framework |
+| Sublist3r | Subdomain Enumeration |
+| Netcat | Network Communication |
+| IPTables | Linux Firewall |
+| Wireshark | Packet Analysis |
 
 ---
 
@@ -56,15 +80,38 @@ This repository includes practical notes and command references related to:
 ```bash
 Applied-Penetration-Testing-Notes/
 │
+├── README.md
+│
 ├── Reconnaissance/
+│   ├── reconnaissance.md
+│   ├── recon-ng.md
+│   └── sublist3r.md
+│
 ├── Scanning-Enumeration/
+│   ├── nmap_basic_advanced.md
+│   └── enumeration_lab.md
+│
 ├── Vulnerability-Assessment/
+│   ├── openvas.md
+│   └── nessus.md
+│
 ├── Password-Attacks/
+│   └── hydra_commands.md
+│
 ├── Exploitation/
+│   ├── metasploit.md
+│   ├── meterpreter.md
+│   ├── windows_exploitation.md
+│   └── linux_exploitation.md
+│
 ├── Firewall/
-├── Screenshots/
+│   └── iptables_firewall.md
+│
 ├── Resources/
-└── README.md
+│   ├── applied_Penetration_Testing_syllabus.pdf
+│   └── Module_3_Nmap_Lab.pdf
+│
+└── Screenshots/
 ```
 
 ---
@@ -77,26 +124,38 @@ Applied-Penetration-Testing-Notes/
 - DIG
 - NSLOOKUP
 - WhatWeb
+- wafw00f
 - theHarvester
-- Wafw00f
-- Sublist3r
 - Recon-ng
+- Sublist3r
+
+Example:
+
+```bash
+whois example.com
+```
+
+Used to collect domain registration information.
 
 ---
 
 ## 🌐 Scanning & Enumeration
 
-- Nmap Basic Scan
+- Nmap Scanning
 - Service Detection
-- Version Detection
-- Vulnerability Scanning
-- Enumeration Techniques
+- OS Detection
+- Vulnerability Enumeration
+- Banner Grabbing
+- SMB Enumeration
+- DNS Enumeration
 
 Example:
 
 ```bash
 nmap -sV 192.168.1.1
 ```
+
+Used to detect running services and versions.
 
 ---
 
@@ -105,7 +164,8 @@ nmap -sV 192.168.1.1
 - Hydra FTP Attack
 - SSH Brute Force
 - HTTP POST Form Attack
-- Wordlist Usage
+- RDP Brute Force
+- SMB Authentication Attack
 
 Example:
 
@@ -113,21 +173,25 @@ Example:
 hydra -l admin -P rockyou.txt ssh://192.168.1.10
 ```
 
+Used to perform SSH brute-force testing.
+
 ---
 
 ## 💥 Exploitation
 
 - Metasploit Framework
-- Meterpreter Sessions
-- Linux Exploitation
-- Windows Exploitation
 - Reverse Shell Payloads
+- Meterpreter Sessions
+- Windows Exploitation
+- Linux Exploitation
 
 Example:
 
 ```bash
 msfconsole
 ```
+
+Used to launch Metasploit Framework.
 
 ---
 
@@ -136,15 +200,25 @@ msfconsole
 - OpenVAS Setup
 - Nessus Installation
 - Vulnerability Scanning
-- CVE Analysis
+- Security Reporting
+- CVE Detection
+
+Example:
+
+```bash
+gvm-setup
+```
+
+Used to configure OpenVAS.
 
 ---
 
 ## 🔥 Firewall Management
 
 - IPTables Rules
-- Traffic Blocking
-- Port Filtering
+- Traffic Filtering
+- Port Blocking
+- NAT Configuration
 - Packet Inspection
 
 Example:
@@ -153,21 +227,26 @@ Example:
 iptables -L -v -n
 ```
 
----
+Used to display firewall rules and statistics.
 
-# ⚠️ Disclaimer
 
-This repository is created strictly for educational purposes and authorized laboratory environments only.
 
-All testing activities should be performed ethically and legally in controlled environments. Unauthorized access to systems, networks, or applications is illegal.
+# 📈 Repository Status
+
+- ✔️ Reconnaissance Notes Completed
+- ✔️ Nmap & Enumeration Notes Completed
+- ✔️ Vulnerability Assessment Notes Completed
+- ✔️ Exploitation Notes Completed
+- ✔️ Firewall Notes Completed
+- ✔️ Hydra Notes Completed
 
 ---
 
 # 🎯 Learning Objectives
 
-The main goals of this repository are:
+The primary objectives of this repository are:
 
-- Improve practical cybersecurity knowledge
+- Improve practical cybersecurity skills
 - Learn penetration testing methodologies
 - Practice Linux and networking commands
 - Understand vulnerability assessment techniques
@@ -177,9 +256,23 @@ The main goals of this repository are:
 
 # 📖 Educational Purpose
 
-This repository was created as part of practical cybersecurity learning and hands-on penetration testing practice.
+This repository was created for educational and authorized laboratory environments only.
 
-It serves as a personal learning archive and reference for cybersecurity concepts, commands, and lab exercises.
+It serves as:
+- A personal cybersecurity learning archive
+- A penetration testing practice notebook
+- A quick reference for cybersecurity commands
+- A hands-on lab documentation repository
+
+---
+
+# ⚠️ Disclaimer
+
+This repository is strictly for educational and ethical learning purposes.
+
+Unauthorized access, attacks, or testing against systems without proper authorization is illegal and unethical.
+
+Always perform security testing in authorized environments only.
 
 ---
 
@@ -191,6 +284,14 @@ It serves as a personal learning archive and reference for cybersecurity concept
 
 ---
 
+# 🌐 Connect With Me
+
+- GitHub: [mdmirajhossansajid](https://github.com/mdmirajhossansajid)
+
+---
+
 # ⭐ Support
 
 If you found this repository useful, consider giving it a ⭐ on GitHub.
+
+```
