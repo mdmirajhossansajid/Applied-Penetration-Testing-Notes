@@ -1,0 +1,38 @@
+whois   (Getting Domain Register and DNS information)
+        >whois example.com
+
+dig     (Getting Domain IP address)
+        >dig example.com
+
+WhatWeb (recognises web technologies including content management systems (CMS), blogging platforms, 
+         statistic/analytics packages, JavaScript libraries, web servers, and embedded devices. 
+         WhatWeb has over 1800 plugins, each to recognise something different. WhatWeb also identifies 
+         version numbers, email addresses, account IDs, web framework modules, SQL errors, and more.)
+
+         >whatweb  example.com (General check)
+         >whatweb web -v -a 3 example.com (agressive check)
+
+nslookup (Smpaly check about Domain)
+         Find an IP Address (A Record): Retrieves the IP address for a specific domain.
+                   >nslookup example.com
+         Reverse DNS Lookup: Finds the domain name associated with an IP address.
+                   >nslookup 192.168.1.1
+         Look up Mail Servers (MX Records): Identifies servers responsible for receiving email.
+                   >nslookup -type=mx example.com
+         Query Specific DNS Records: Use the -type or -q flag to find records like ns (Name Server), txt (Text), or soa (Start of Authority).
+                   >nslookup -type=ns example.com
+         Use a Specific DNS Server: Query a specific server (e.g., Google's 8.8.8.8) instead of your default local server.
+                   >nslookup example.com 8.8.8.8
+         Enable Debug Mode: View detailed information about the query and response packets.
+                   >nslookup -debug example.com
+         Set record type: set type=mx (Looking Email Server Mxtoolbox Records)
+         Set record type: set type=NS (Looking Name Server)
+
+wafw00f (Find any web application behind the firewall)
+         >wafw00f -l (check the list of firewall)
+         >wafw00f https://www.hexzilla.com/
+curl -I https://www.hexzilla.com/ (for checking specific firewall model)
+
+theHarvester (Find the email and subdomain)
+         >theHarvester -d example.com -b all -f output.html
+         >theHarvester -d example.com -l 500 -b yahoo

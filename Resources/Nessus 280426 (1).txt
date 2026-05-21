@@ -1,0 +1,19 @@
+go to "tenable.com" and download Nessus for "Linux-Ubuntu-and64"
+go to Nessus activation Code and register that website free virtion.
+
+For Installation you should Remember Nussess will not install "apt" formet
+go to where you Download that file and doing "ls" , then you see the .deb file
+dpkg -i <Nessus downloaded File>
+
+SHowing the Start Nessus Scanner link, copy that link and past your terminal for start Nessus
+another one is showing https link, copy that link and hit your Browser with local host " https://127.0.0.1:8834/ "for start the Nessus
+Put your activation code, then put username and password, then provide some time to download and install plugin, after that showing the GUI interface.
+
+For scanning, find out the host ip >netdiscover -r 192.168.0.0/24
+Then click on "Creat a New Scan" then go to Basic Network Scan and put Name, Folder and Targets IP/Domain name
+save that scan and click on Lunch then it will be start
+
+
+Nessus
+License Information
+Activation Code: S8RZ-T3TX-87BX-T8LC-VBYU

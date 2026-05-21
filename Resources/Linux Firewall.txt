@@ -1,0 +1,11 @@
+iptables -L -v -n (View Current Rules:)
+iptables -A INPUT -s <IP_ADDRESS> -j DROP (Block an IP Address:)
+iptables -A INPUT -s <IP_ADDRESS> -p tcp --destination-port 25 -j DROP (Block an SMTP/email:)
+iptables -A INPUT -p tcp --dport 22 -j ACCEPT (Allow Traffic on a Specific Port (e.g., SSH):)
+iptables -D INPUT 3 (delete INPUT row)
+iptables -I INPUT -s <IP_ADDRESS> -j ACCEPT (accept an IP Address:)
+iptables-save > /etc/iptables/rules.v4 to save them (requires iptables-persistent package).
+iptables -P FORWORD DROP (drop the forword)
+iptables -I test -j DROP -d 130.x.y.z -p all (To block all traffic)
+iptables -I test -j DROP -d 130.x.y.z -p tcp --dport 22 (To block a specific port like ssh(22) where -p is the protocol tcp or udp and --dport is the destination port)
+

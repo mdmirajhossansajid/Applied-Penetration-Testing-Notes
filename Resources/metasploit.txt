@@ -1,0 +1,29 @@
+Username - vagrant;password - vagrant 
+
+service postgresql start (start metasploit service that store pentest result)
+service postgresql status (check metasploit service active or not)
+
+sudo apt upgrade (To Upgrade your Kali )
+msfconsole (start Metasploit)
+msfconsole -q (start Metasploit without banner)
+
+expolits (useing Hacking Host OS and Application in Hosts)
+auxiliary (Port Scann, fuzzers)
+encoder (Evade the Firewalls/ IDS/ anti-malware software)
+nops (used to keep the payload size consistent during the expolitation phase)
+evasion (evade the firewalls)
+payloads (is the code that is going to be executed once you exploit a vulnerability and this, decide what we want to achieve after the exploitation)
+
+msf6> help
+msf6> ifconfig
+msf6> ping 8.8.8.8
+msf6> search wordpress
+msf6> search netapi
+msf6> search ssh
+msf6> search adobe
+msf6> search multi/handler
+
+exploit-bd.com (Search any Expolite)
+
+msf6> use exploit/multi/handler > show options > set LHOST <ip Address local host> > exploit
+msf6> search auxiliary (showing all auxiliary modules)

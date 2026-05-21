@@ -1,0 +1,58 @@
+apt-get install recon-ng (For install recon-ng)
+recon-ng then press Enter (For open recon-ng)
+db schema (For checking all db Parametters)
+db insert domains (create any or add any domains)
+sho domains (showing all domains)
+workspaces create <workspace Name> (for creating any workspaces)
+workspaces list (Showing all workspace)
+marketplace search (Showing all moduils)
+marketplace search <any name>(Showing specific moduils)
+markerplace info <module path> (For showing moduls details)
+marketplace install <module path / whois> (For install any moduls)
+modules load <module path> (For load or enter any moduls) 
+  >then write "info" and press enter (for getting all info about that modules)
+options set SOURCE <any domain> (For getting any website / domain information) 
+  >then write "run" and press enter (for run the module)
+  >then write "show contacts" and press enter (for showing context table)
+  >then write "db delete contacts <range the db (4-6)>" press enter (for deleting specific db row from context table)
+
+some of marketplace most useful
+recon/domains-contacts/whois_pocs
+recon/domains-hosts/google_site_web
+recon/domains-hosts/hackertarget
+recon/domains-hosts/brute_hosts
+discovery/info_disclosure/interesting_files
+recon/profiles-profiles/profiler
+
+marketplace install <module path / hackertarget> (For install any moduls/ checking all host information)
+modules load <module path> (For load or enter any moduls) 
+  >then write "info" and press enter (for getting all info about that modules)
+options set SOURCE <any domain> (For getting any website / domain information) 
+  >then write "run" and press enter (for run the module)
+  >then write "show hosts" and press enter (for showing hosts table)
+  >then write "show contacts" and press enter (for showing context table)
+  >then write "db delete contacts <range the db (4-6)>" and press enter (for deleting specific db row from context table)
+
+
+Shodan installation
+
+marketplace search shodan
+marketplace install <shodan_hostname> (For install any shadon) 
+  >but showing error, because it's need to "api key"
+  > going shodan website nad login with your account and get api key.
+keys add shodan_api <insert the key>
+marketplace load <module path> (For load or enter any moduls) 
+  >then write "info" and press enter (for getting all info about that modules)
+options set SOURCE <any domain> (For getting any website / domain information) 
+  >then write "run" and press enter (for run the module)
+  >then write "show hosts" and press enter (for showing hosts table)
+  >then write "show contacts" and press enter (for showing context table)
+  >then write "db delete contacts <range the db (4-6)>" and press enter (for deleting specific db row from context table)
+
+
+cd /usr/share/recon-ng/ (going recon path)
+then write >ls
+then write > ./recon-web
+then select the loaclhosts link http://127.0.0.1:5000
+
+

@@ -1,0 +1,4 @@
+sublist3r -h (Checking all command)
+sublist3r -d yahoo.com (Checking Sub domain)
+sublist3r -v -d yahoo.com -p 80,443 (Checking sub Domain with port number by verbose mode)
+sublist3r -d kali.org -t 3 -e bing (Search for subdomains of kali.org (-d kali.org) using the Bing search engine (-e bing) with 3 threads (-t 3).)

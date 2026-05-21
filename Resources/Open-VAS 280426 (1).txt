@@ -1,0 +1,5 @@
+apt-get install gvm -y (For install OpenVAS)
+gvm-setup (Setup the OpenVAS)
+collect username and password
+gvm-check-setup (For Checking openVAS)
+https://127.0.0.1:9392

